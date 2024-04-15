@@ -313,7 +313,7 @@ h6 {
 }
 .dizme_tm_mobile_menu .mobile_in .logo img {
   max-width: 90px;
-  max-height: 70px;
+  max-height: 36px;
 }
 .dizme_tm_mobile_menu .trigger {
   line-height: 0;
@@ -2871,7 +2871,7 @@ input[type="number"] {
   }
   .dizme_tm_header .logo img {
     max-width: 110px;
-    max-height: 70px;
+    max-height: 52px;
   }
   .dizme_tm_header .menu ul li {
     margin-right: 30px;
