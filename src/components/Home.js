@@ -70,7 +70,8 @@ const Home = ({ dark }) => {
                           key={i}
                           className={`skills ${skill.name} anim_moveBottom`}
                         >
-                          {parse(skill.icon)}
+                          {/* skill.icon */}
+                          <img src={`${skill.icon}`} alt="image"/>
                         </span>
                       )
                   )}
