@@ -27,14 +27,14 @@
     }
   ],
   "social": [
-    { "name": "facebook", "icon": "icon-facebook-1", "url": "#" },
-    { "name": "twitter", "icon": "icon-twitter-1", "url": "#" },
-    { "name": "linkedin", "icon": "icon-linkedin-1", "url": "#" },
-    { "name": "behance", "icon": "icon-behance", "url": "#" }
+    { "name": "Github", "icon": "icon-github-1", "url": "https://github.com/crysosancher" },
+    { "name": "linkedin", "icon": "icon-linkedin-1", "url": "https://www.linkedin.com/in/crysosancher/"},
+    { "name": "Instagram", "icon": "icon-instagram-1", "url": "https://www.instagram.com/mr_viratpandey/" },
+    { "name": "twitter", "icon": "icon-twitter-1", "url": "https://twitter.com/Mr_viratpandey" }
   ],
   "contact": {
-    "address": "20, Somewhere in world",
-    "email": "hello@dizme.com",
-    "phn": "+123 456 7890"
+    "address": "Kolkata, India",
+    "email": "vibhupandey.vp@gmail.com",
+    "phn": "+91 7070224546"
   }
 }
