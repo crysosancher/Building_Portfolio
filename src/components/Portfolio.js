@@ -54,8 +54,8 @@ const Portfolio = () => {
             <span>Portfolio</span>
             <h3>My Amazing Works</h3>
             <p>
-              Most common methods for designing websites that work well on
-              desktop is responsive and adaptive design
+              Explore my portfolio and discover a showcase of my amazing works –
+              where innovation meets excellence!
             </p>
           </div>
           <div className="portfolio_filter">
@@ -73,7 +73,7 @@ const Portfolio = () => {
                   className={`c-pointer ${activeBtn("youtube")}`}
                   onClick={handleFilterKeyChange("youtube")}
                 >
-                  Youtube
+                  Websites
                 </a>
               </li>
               <li>
@@ -117,23 +117,73 @@ const Portfolio = () => {
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Mockup Shape"
-                    data-category="Youtube"
+                    data-title="Comfortjourney"
+                    data-category="Full Stack WebApp"
                   >
                     <a
-                      className="popup-youtube"
-                      href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1"
+                      // className="popup-youtube"
+                      href="https://www.comfortjourney.in/"
+                      target="_blank"
                     >
-                      <img src="img/thumbs/42-56.jpg" alt="image" />
+                      <img src="img/thumbs/42-34.jpg" alt="image" />
                       <div
                         className="main"
-                        data-img-url="img/portfolio/1.jpg"
+                        data-img-url="img/portfolio/comfort.png"
                       />
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Mockup Shape</h3>
-                    <span>Youtube</span>
+                    <h3>comfortjourney</h3>
+                    <span>Full Stack</span>
+                  </div>
+                </div>
+              </li>
+              <li className="youtube grid-item">
+                <div className="inner">
+                  <div
+                    className="entry dizme_tm_portfolio_animation_wrap"
+                    data-title="Firebond"
+                    data-category="Frontend "
+                  >
+                    <a
+                      // className="popup-youtube"
+                      href="https://www.firebond.xyz/"
+                      target="_blank"
+                    >
+                      <img src="img/thumbs/42-34.jpg" alt="image" />
+                      <div
+                        className="main"
+                        data-img-url="img/portfolio/firebond.png"
+                      />
+                    </a>
+                  </div>
+                  <div className="mobile_title">
+                    <h3>Firebond</h3>
+                    <span>Frontend</span>
+                  </div>
+                </div>
+              </li>
+              <li className="youtube grid-item">
+                <div className="inner">
+                  <div
+                    className="entry dizme_tm_portfolio_animation_wrap"
+                    data-title="Clickup"
+                    data-category="Frontend"
+                  >
+                    <a
+                      // className="popup-youtube"
+                      href="https://prompt-4bgizn09v-crysosancher.vercel.app/"target="_blank"
+                    >
+                      <img src="img/thumbs/42-34.jpg" alt="image" />
+                      <div
+                        className="main"
+                        data-img-url="img/portfolio/clickup.png"
+                      />
+                    </a>
+                  </div>
+                  <div className="mobile_title">
+                    <h3>Clickup</h3>
+                    <span>Frontend</span>
                   </div>
                 </div>
               </li>
