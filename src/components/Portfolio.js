@@ -73,39 +73,42 @@ const Portfolio = () => {
                   className={`c-pointer ${activeBtn("youtube")}`}
                   onClick={handleFilterKeyChange("youtube")}
                 >
-                  Websites
+                {/**!! Youtube */}
+                  Frontend
+                  
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   className={`c-pointer ${activeBtn("vimeo")}`}
                   onClick={handleFilterKeyChange("vimeo")}
                 >
-                  Vimeo
+                  Tools
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   className={`c-pointer ${activeBtn("soundcloud")}`}
                   onClick={handleFilterKeyChange("soundcloud")}
                 >
-                  Soundcloud
+                {/* Soundcloud */}
+                  Full Stack
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   className={`c-pointer ${activeBtn("popup")}`}
                   onClick={handleFilterKeyChange("popup")}
                 >
-                  Popup
+                  Backend
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   className={`c-pointer  ${activeBtn("detail")}`}
                   onClick={handleFilterKeyChange("detail")}
                 >
-                  Detail
+                  Backend & Tools
                 </a>
               </li>
             </ul>
@@ -113,7 +116,9 @@ const Portfolio = () => {
           <div className="dizme_tm_portfolio_titles" />
           <div className="portfolio_list wow fadeInUp" data-wow-duration="1s">
             <ul className="gallery_zoom grid">
-              <li className="youtube grid-item">
+            
+            {/* ComfortJouney */}
+              {/* <li className="youtube grid-item">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -125,7 +130,7 @@ const Portfolio = () => {
                       href="https://www.comfortjourney.in/"
                       target="_blank"
                     >
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
+                      <img src="img/thumbs/42-34 copy.jpg" alt="image" />
                       <div
                         className="main"
                         data-img-url="img/portfolio/comfort.png"
@@ -137,32 +142,9 @@ const Portfolio = () => {
                     <span>Full Stack</span>
                   </div>
                 </div>
-              </li>
-              <li className="youtube grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Firebond"
-                    data-category="Frontend "
-                  >
-                    <a
-                      // className="popup-youtube"
-                      href="https://www.firebond.xyz/"
-                      target="_blank"
-                    >
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/firebond.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Firebond</h3>
-                    <span>Frontend</span>
-                  </div>
-                </div>
-              </li>
+              </li> */}
+              
+              {/* ClickUp */}
               <li className="youtube grid-item">
                 <div className="inner">
                   <div
@@ -172,7 +154,7 @@ const Portfolio = () => {
                   >
                     <a
                       // className="popup-youtube"
-                      href="https://prompt-4bgizn09v-crysosancher.vercel.app/"target="_blank"
+                      href="https://prompt-mu.vercel.app/"target="_blank"
                     >
                       <img src="img/thumbs/42-34.jpg" alt="image" />
                       <div
@@ -187,11 +169,38 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-              <li className="vimeo grid-item">
+
+              {/* Shiva Cruz */}
+              <li className="youtube grid-item">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Ave Bottle"
+                    data-title="Community Page"
+                    data-category="Frontend"
+                  >
+                    <a
+                      // className="popup-youtube"
+                      href="https://shivacruz.netlify.app/"target="_blank"
+                    >
+                      <img src="img/thumbs/42-34.jpg" alt="image" />
+                      <div
+                        className="main"
+                        data-img-url="img/portfolio/community.png"
+                      />
+                    </a>
+                  </div>
+                  <div className="mobile_title">
+                    <h3>Clickup</h3>
+                    <span>Frontend</span>
+                  </div>
+                </div>
+              </li>
+              {/*  */}
+              {/* <li className="vimeo grid-item">
+                <div className="inner">
+                  <div
+                    className="entry dizme_tm_portfolio_animation_wrap"
+                    data-title="Comfortjouney"
                     data-category="Vimeo"
                   >
                     <a
@@ -210,32 +219,86 @@ const Portfolio = () => {
                     <span>Vimeo</span>
                   </div>
                 </div>
-              </li>
+              </li> */}
+              {/* Elitmus */}
               <li className="soundcloud grid-item">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Magic Art"
-                    data-category="Soundcloud"
+                    data-title="Online Gaming"
+                    data-category="Full Stack"
                   >
                     <a
                       className="soundcloude_link mfp-iframe audio"
-                      href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                      href="https://elitmus1.onrender.com/"target="_blank"
                     >
-                      <img src="img/thumbs/42-56.jpg" alt="image" />
+                      <img src="img/thumbs/42-34.jpg" alt="image" />
                       <div
                         className="main"
-                        data-img-url="img/portfolio/3.jpg"
+                        data-img-url="img/portfolio/elitmus.png"
                       />
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Magic Art</h3>
-                    <span>Soundcloud</span>
+                    <h3>Online Gaming</h3>
+                    <span>Full Stack</span>
                   </div>
                 </div>
               </li>
-              <li className="popup grid-item">
+             
+              {/* Firebond */}
+            <li className="youtube grid-item">
+                <div className="inner">
+                  <div
+                    className="entry dizme_tm_portfolio_animation_wrap"
+                    data-title="Firebond"
+                    data-category="Frontend "
+                  >
+                    <a
+                      // className="popup-youtube"
+                      href="https://www.firebond.xyz/"
+                      target="_blank"
+                    >
+                      <img src="/img/thumbs/42-34 copy.jpg" alt="image" />
+                      <div
+                        className="main"
+                        data-img-url="img/portfolio/firebond.png"
+                      />
+                    </a>
+                  </div>
+                  <div className="mobile_title">
+                    <h3>Firebond</h3>
+                    <span>Frontend</span>
+                  </div>
+                </div>
+              </li>
+               {/* comfortJourney */}
+               <li className="soundcloud grid-item">
+                <div className="inner">
+                  <div
+                    className="entry dizme_tm_portfolio_animation_wrap"
+                    data-title="Comfortjourney"
+                    data-category="Full Stack"
+                  >
+                    <a
+                      className="soundcloude_link mfp-iframe audio"
+                      href="https://www.comfortjourney.in/"target="_blank"
+                    >
+                      <img src="img/thumbs/42-56.jpg" alt="image" />
+                      <div
+                        className="main"
+                        data-img-url="img/portfolio/comfort.png"
+                      />
+                    </a>
+                  </div>
+                  <div className="mobile_title">
+                    <h3>ComfortJourney</h3>
+                    <span>Full Stack</span>
+                  </div>
+                </div>
+              </li>
+              
+              {/* <li className="popup grid-item">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -255,8 +318,8 @@ const Portfolio = () => {
                     <span>Popup</span>
                   </div>
                 </div>
-              </li>
-              <li className="popup grid-item">
+              </li> */}
+              {/* <li className="popup grid-item">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -276,26 +339,26 @@ const Portfolio = () => {
                     <span>Popup</span>
                   </div>
                 </div>
-              </li>
+              </li> */}
 
               <li className="detail grid-item" onClick={() => setPopup(true)}>
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Global Evolution"
+                    data-title="Tool Summary"
                     data-category="Detail"
                   >
                     <a className="portfolio_popup" href="#">
                       <img src="img/thumbs/42-34.jpg" alt="image" />
                       <div
                         className="main"
-                        data-img-url="img/portfolio/6.jpg"
+                        data-img-url="img/portfolio/lonar.png"
                       />
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Global Evolution</h3>
-                    <span>Detail</span>
+                    <h3>Tool Summary</h3>
+                    <span>Backend</span>
                   </div>
                 </div>
               </li>

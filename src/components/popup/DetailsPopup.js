@@ -13,42 +13,36 @@ const DetailsPopup = ({ open, close }) => {
               <img src="img/thumbs/4-2.jpg" alt="image" />
               <div
                 className="main"
-                data-img-url="img/portfolio/6.jpg"
+                data-img-url="img/portfolio/lonar.png"
                 style={{ backgroundImage: 'url("img/portfolio/6.jpg")' }}
               />
             </div>
             <div className="portfolio_main_title">
-              <h3>Global Evolution</h3>
+              <h3>Lonar Ai</h3>
               <span>
-                <a href="#">Detail</a>
+                <a href="#">Whatsapp Bot</a>
               </span>
               <div />
             </div>
             <div className="main_details">
               <div className="textbox">
                 <p>
-                  We live in a world where we need to move quickly and iterate
-                  on our ideas as flexibly as possible.
+                Spice up your chat game with our seductively savvy WhatsApp bot – where every message leaves them wanting more!
                 </p>
                 <p>
-                  {`Mockups are useful both for the creative phase of the project
-                  - for instance when you're trying to figure out your user
-                  flows or the proper visual hierarchy - and the production
-                  phase when they phase when they will represent the target
-                  product. Building mockups strikes the ideal balance ease of
-                  modification.`}
+                  {`We've developed over 90 tools, ranging from Chrome extensions to chatbots and automation scripts, many of which are confidential. As such, I'm sharing only snapshots of 2-3 tools that have been published and are currently in internal use.`}
                 </p>
               </div>
               <div className="detailbox">
                 <ul>
                   <li>
-                    <span className="first">Client</span>
-                    <span>Alvaro Morata</span>
+                    <span className="first">Teach Stack</span>
+                    <span>Node js, ReactJs, Python, OpenAi and AWS</span>
                   </li>
                   <li>
                     <span className="first">Category</span>
                     <span>
-                      <a href="#">Detail</a>
+                      <a href="#">Miscellaneous</a>
                     </span>
                   </li>
                   <li>
@@ -64,9 +58,10 @@ const DetailsPopup = ({ open, close }) => {
                   <div className="list_inner">
                     <div className="my_image">
                       <img src="img/thumbs/4-2.jpg" alt="image" />
+                    
                       <div
                         className="main"
-                        data-img-url="img/portfolio/1.jpg"
+                        data-img-url="img/portfolio/linkdln.png"
                         style={{
                           backgroundImage: 'url("img/portfolio/1.jpg")',
                         }}
@@ -80,7 +75,7 @@ const DetailsPopup = ({ open, close }) => {
                       <img src="img/thumbs/4-2.jpg" alt="image" />
                       <div
                         className="main"
-                        data-img-url="img/portfolio/2.jpg"
+                        data-img-url="img/portfolio/telegram.png"
                         style={{
                           backgroundImage: 'url("img/portfolio/2.jpg")',
                         }}
@@ -94,7 +89,7 @@ const DetailsPopup = ({ open, close }) => {
                       <img src="img/thumbs/4-2.jpg" alt="image" />
                       <div
                         className="main"
-                        data-img-url="img/portfolio/3.jpg"
+                        data-img-url="img/portfolio/cryso.png"
                         style={{
                           backgroundImage: 'url("img/portfolio/3.jpg")',
                         }}
