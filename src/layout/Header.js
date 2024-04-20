@@ -24,14 +24,14 @@ const Header = ({ logo }) => {
               <li>
                 <a href="#service">Service</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#blog">Blog</a>
-              </li>
+              </li> */}
               <li>
                 <a href="#contact">Contact</a>
               </li>
               <li className="download_cv">
-                <a href="img/cv/1.jpg" download="">
+                <a href="img/cv/pVibhu.pdf" download="vibhu.pdf">
                   <span>Download CV</span>
                 </a>
               </li>

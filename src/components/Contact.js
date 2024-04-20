@@ -1,10 +1,45 @@
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
+
 const Contact = () => {
   const [data, setData] = useState({});
-  useEffect(async () => {
-    setData(await fatchData("/static/info.json"));
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  useEffect(() => {
+    const fetchDataAsync = async () => {
+      const fetchedData = await fatchData("/static/info.json");
+      setData(fetchedData);
+    };
+    fetchDataAsync();
   }, []);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({
+      ...formData,
+      [id]: value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.name && formData.email && formData.phone && formData.message) {
+      setFormError(false);
+      window.location.href = `mailto:vibhupandey.vp@gmail.com?cc=skyldragon.md@gmail.com&subject=${encodeURIComponent(
+        formData.subject || "Enquiry"
+      )}&body=Hi Vibhu%0D%0A%0D%0AI'm ${encodeURIComponent(
+        formData.name
+      )}%0D%0A%0D%0A${encodeURIComponent(formData.message)}`;
+    } else {
+      setFormError(true);
+    }
+  };
+
   return (
     <div className="dizme_tm_section" id="contact">
       <div className="dizme_tm_contact">
@@ -78,13 +113,19 @@ const Contact = () => {
                   <div className="input_list">
                     <ul>
                       <li>
-                        <input id="name" type="text" placeholder="Your Name" />
+                        <input
+                          id="name"
+                          type="text"
+                          placeholder="Your Name"
+                          onChange={handleChange}
+                        />
                       </li>
                       <li>
                         <input
                           id="email"
                           type="text"
                           placeholder="Your Email"
+                          onChange={handleChange}
                         />
                       </li>
                       <li>
@@ -92,10 +133,16 @@ const Contact = () => {
                           id="phone"
                           type="number"
                           placeholder="Your Phone"
+                          onChange={handleChange}
                         />
                       </li>
                       <li>
-                        <input id="subject" type="text" placeholder="Subject" />
+                        <input
+                          id="subject"
+                          type="text"
+                          placeholder="Subject"
+                          onChange={handleChange}
+                        />
                       </li>
                     </ul>
                   </div>
@@ -104,41 +151,27 @@ const Contact = () => {
                       id="message"
                       placeholder="Write your message here"
                       defaultValue={""}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="dizme_tm_button">
-                    <a id="send_message" href="#">
-                      <span>Submit Now</span>
+                    <a
+                      id="send_message"
+                      href={`mailto:vibhupandey.vp@gmail.com?cc=skyldragon.md@gmail.com&subject=${formData.subject}&body=Hi Vibhu%0D%0A%0D%0AI'm ${formData.name}%0D%0A%0D%0A${formData.message}`}
+                    >
+                      <span>Contact Us</span>
                     </a>
                   </div>
                 </form>
               </div>
             </div>
-            <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
-              <img src="img/brushes/contact/2.png" alt="image" />
-            </div>
-          </div>
-          <div className="dizme_tm_map wow fadeInUp" data-wow-duration="1s">
-            <div className="mapouter">
-              <div className="gmap_canvas">
-                <iframe
-                  height={375}
-                  style={{ width: "100%" }}
-                  id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                />
-                <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon" />
-                <br />
-              </div>
-            </div>
-            {/* Get your API here https://www.embedgooglemap.net */}
+            {/* Brush and map sections */}
           </div>
         </div>
-        <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/contact/1.png" alt="image" />
-        </div>
+        {/* Brush */}
       </div>
     </div>
   );
 };
+
 export default Contact;

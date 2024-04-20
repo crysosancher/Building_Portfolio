@@ -34,20 +34,20 @@ const Index = () => {
       <Portfolio />
       {/* /PORTFOLIO */}
       {/* SKILLS */}
-      <Skills />
+      {/* <Skills /> */}
       {/* /SKILLS */}
       {/* SERVICES */}
       <Service />
       {/* /SERVICES */}
       {/* TESTIMONIALS */}
-      <Testimonial />
+      {/* <Testimonial /> */}
       {/* /TESTIMONIALS */}
       {/* PARTNERS */}
-      <Partners />
+      {/* <Partners /> */}
       {/* /PARTNERS */}
       {/* NEWS */}
-      <News />
-      <Newsletter />
+      {/* <News /> */}
+      {/* <Newsletter /> */}
       <Contact />
     </Layout>
   );

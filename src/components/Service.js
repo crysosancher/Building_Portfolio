@@ -20,10 +20,10 @@ const Service = ({ dark }) => {
     }, 1000);
   }, []);
 
-  const onClick = (index) => {
-    setPopup(true);
-    setPopupdata(data && data[index]);
-  };
+  // const onClick = (index) => {
+  //   // setPopup(true);
+  //   // setPopupdata(data && data[index]);
+  // };
 
   return (
     <div className="dizme_tm_section" id="service">
@@ -38,8 +38,7 @@ const Service = ({ dark }) => {
             <span>Services</span>
             <h3>What I Do for Clients</h3>
             <p>
-              Most common methods for designing websites that work well on
-              desktop is responsive and adaptive design
+            Crafting digital experiences that captivate, innovate, and elevate your brand online.
             </p>
           </div>
           <div className="service_list">
@@ -54,7 +53,7 @@ const Service = ({ dark }) => {
                         }`}
                         data-wow-duration="1s"
                         key={i}
-                        onClick={() => onClick(i)}
+                        // onClick={() => onClick(i)}
                       >
                         <div className="list_inner tilt-effect">
                           <span className="icon">
@@ -76,13 +75,13 @@ const Service = ({ dark }) => {
                           <div className="title">
                             <h3>{data.title}</h3>
                             <span className="price">
-                              Starts from <span>${data.price}</span>
+                              Used By <span>{data.price}</span>
                             </span>
                           </div>
                           <div className="text">
                             <p>{data.shortDec}</p>
                           </div>
-                          <a className="dizme_tm_full_link" href="#" />
+                          <a className="dizme_tm_full_link" href="#service" />
                           <img
                             className="popup_service_image"
                             src="img/service/1.jpg"
