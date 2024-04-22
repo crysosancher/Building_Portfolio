@@ -73,9 +73,8 @@ const Portfolio = () => {
                   className={`c-pointer ${activeBtn("youtube")}`}
                   onClick={handleFilterKeyChange("youtube")}
                 >
-                {/**!! Youtube */}
+                  {/**!! Youtube */}
                   Frontend
-                  
                 </a>
               </li>
               {/* <li>
@@ -91,7 +90,7 @@ const Portfolio = () => {
                   className={`c-pointer ${activeBtn("soundcloud")}`}
                   onClick={handleFilterKeyChange("soundcloud")}
                 >
-                {/* Soundcloud */}
+                  {/* Soundcloud */}
                   Full Stack
                 </a>
               </li>
@@ -116,8 +115,7 @@ const Portfolio = () => {
           <div className="dizme_tm_portfolio_titles" />
           <div className="portfolio_list wow fadeInUp" data-wow-duration="1s">
             <ul className="gallery_zoom grid">
-            
-            {/* ComfortJouney */}
+              {/* ComfortJouney */}
               {/* <li className="youtube grid-item">
                 <div className="inner">
                   <div
@@ -128,7 +126,7 @@ const Portfolio = () => {
                     <a
                       // className="popup-youtube"
                       href="https://www.comfortjourney.in/"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <img src="img/thumbs/42-34 copy.jpg" alt="image" />
                       <div
@@ -143,7 +141,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li> */}
-              
+
               {/* ClickUp */}
               <li className="youtube grid-item">
                 <div className="inner">
@@ -154,7 +152,9 @@ const Portfolio = () => {
                   >
                     <a
                       // className="popup-youtube"
-                      href="https://prompt-mu.vercel.app/"target="_blank"
+                      href="https://prompt-mu.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img src="img/thumbs/42-34.jpg" alt="image" />
                       <div
@@ -180,7 +180,9 @@ const Portfolio = () => {
                   >
                     <a
                       // className="popup-youtube"
-                      href="https://shivacruz.netlify.app/"target="_blank"
+                      href="https://shivacruz.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img src="img/thumbs/42-34.jpg" alt="image" />
                       <div
@@ -230,7 +232,9 @@ const Portfolio = () => {
                   >
                     <a
                       className="soundcloude_link mfp-iframe audio"
-                      href="https://elitmus1.onrender.com/"target="_blank"
+                      href="https://elitmus1.onrender.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img src="img/thumbs/42-34.jpg" alt="image" />
                       <div
@@ -245,9 +249,9 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-             
+
               {/* Firebond */}
-            <li className="youtube grid-item">
+              <li className="youtube grid-item">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -258,6 +262,7 @@ const Portfolio = () => {
                       // className="popup-youtube"
                       href="https://www.firebond.xyz/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img src="/img/thumbs/42-34 copy.jpg" alt="image" />
                       <div
@@ -272,8 +277,8 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-               {/* comfortJourney */}
-               <li className="soundcloud grid-item">
+              {/* comfortJourney */}
+              <li className="soundcloud grid-item">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -282,7 +287,9 @@ const Portfolio = () => {
                   >
                     <a
                       className="soundcloude_link mfp-iframe audio"
-                      href="https://www.comfortjourney.in/"target="_blank"
+                      href="https://www.comfortjourney.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img src="img/thumbs/42-56.jpg" alt="image" />
                       <div
@@ -297,7 +304,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-              
+
               {/* <li className="popup grid-item">
                 <div className="inner">
                   <div

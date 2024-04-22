@@ -16,7 +16,12 @@ const Intro = () => {
             <span className="anim" />
             <span className="anim" />
             <span className="anim" />
-            <a href="#" target="_blank" className="pricing-info anim">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pricing-info anim"
+            >
               -20%
             </a>
           </div>
@@ -33,14 +38,24 @@ const Intro = () => {
                 <img src="img/intro/light.png" alt="image" />
                 <h3 className="title">Light Demo</h3>
               </div>
-              <a className="intro_link" href="/" target="_blank" />
+              <a
+                className="intro_link"
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
             </div>
             <div className="right">
               <div className="desc">
                 <img src="img/intro/dark.png" alt="image" />
                 <h3 className="title">Dark Demo</h3>
               </div>
-              <a className="intro_link" href="index-dark" target="_blank" />
+              <a
+                className="intro_link"
+                href="index-dark"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
             </div>
           </div>
         </div>

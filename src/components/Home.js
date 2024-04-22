@@ -46,7 +46,11 @@ const Home = ({ dark }) => {
                       data.social &&
                       data.social.map((social, i) => (
                         <li key={i}>
-                          <a href={`${social.url}`}target="_blank">
+                          <a
+                            href={`${social.url}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <i className={social.icon} />
                           </a>
                         </li>
@@ -71,7 +75,7 @@ const Home = ({ dark }) => {
                           className={`skills ${skill.name} anim_moveBottom`}
                         >
                           {/* skill.icon */}
-                          <img src={`${skill.icon}`} alt="image"/>
+                          <img src={`${skill.icon}`} alt="image" />
                         </span>
                       )
                   )}

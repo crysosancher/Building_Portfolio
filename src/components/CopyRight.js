@@ -10,7 +10,8 @@ const CopyRight = ({ brandName }) => {
                 <a
                   href="https://themeforest.net/user/codeefly"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  
                 >
                   {brandName && brandName}
                 </a>{" "}
