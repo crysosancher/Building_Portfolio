@@ -8,7 +8,7 @@ const CopyRight = ({ brandName }) => {
               <p>
                 Developed with love by{" "}
                 <a
-                  href="https://themeforest.net/user/codeefly"
+                  href="https://www.cryso.studio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   
@@ -20,12 +20,12 @@ const CopyRight = ({ brandName }) => {
             </div>
             <div className="right wow fadeInRight" data-wow-duration="1s">
               <ul>
-                <li>
+                {/* <li>
                   <a href="#">{`Terms & Condition`}</a>
                 </li>
                 <li>
                   <a href="#">Privacy Policy</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
