@@ -47,11 +47,11 @@ const MobileMenu = ({ logo }) => {
                 Service
               </a>
             </li>
-            <li>
+            {/* <li>
               <a onClick={() => setToggle(false)} href="#blog">
                 Blog
               </a>
-            </li>
+            </li> */}
             <li>
               <a onClick={() => setToggle(false)} href="#contact">
                 Contact
