@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="shortcut icon" href="/favicons/favicons.ico" />
         <meta
           name="google-site-verification"
-          content="sJN2MPzgDpzPOlooLsyGEpQUDoaPdXM9OYMBoCGuzHU"
+          content="google3a41203cd6529ae4"
         
         />
       </Head>
