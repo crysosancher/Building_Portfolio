@@ -192,7 +192,7 @@ const Portfolio = () => {
                     </a>
                   </div>
                   <div className="mobile_title">
-                    <h3>Clickup</h3>
+                    <h3>Community Website</h3>
                     <span>Frontend</span>
                   </div>
                 </div>
