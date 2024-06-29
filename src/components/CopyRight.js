@@ -8,7 +8,7 @@ const CopyRight = ({ brandName }) => {
               <p>
                 Developed with love by{" "}
                 <a
-                  href="https://www.cryso.studio/"
+                  href="https://www.crysomedia.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   

@@ -23,7 +23,7 @@ const About = ({ dark }) => {
                 <div className="numbers project">
                   <div className="wrapper">
                     <h3>
-                      <Counter end={698} />+
+                      <Counter end={123} />+
                     </h3>
                     <span className="name">
                       Total
