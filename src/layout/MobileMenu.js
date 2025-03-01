@@ -57,11 +57,11 @@ const MobileMenu = ({ logo }) => {
                 Contact
               </a>
             </li>
-            <li className="download_cv">
+            {/* <li className="download_cv">
               <a href="img/cv/pVibhu.pdf" download="">
                 <span>Download CV</span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
