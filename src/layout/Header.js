@@ -30,11 +30,11 @@ const Header = ({ logo }) => {
               <li>
                 <a href="#contact">Contact</a>
               </li>
-              {/* <li className="download_cv">
-                <a href="img/cv/pVibhu.pdf" download="vibhu.pdf">
+               <li className="download_cv">
+                <a href="img/cv/Vibhu_pandey_GENAI.pdf" download="vibhu_pandey_genAI.pdf">
                   <span>Download CV</span>
                 </a>
-              </li> */}
+              </li> 
             </ul>
           </div>
         </div>
