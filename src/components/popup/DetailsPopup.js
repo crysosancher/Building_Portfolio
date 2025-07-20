@@ -1,4 +1,5 @@
-const DetailsPopup = ({ open, close }) => {
+const DetailsPopup = ({ open, close, dataText }) => {
+  console.log("DetailsPopup", open, close, dataText);
   return (
     <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
       <div className="box_inner">
@@ -27,7 +28,8 @@ const DetailsPopup = ({ open, close }) => {
             <div className="main_details">
               <div className="textbox">
                 <p>
-                Spice up your chat game with our seductively savvy WhatsApp bot – where every message leaves them wanting more!
+                  Spice up your chat game with our seductively savvy WhatsApp
+                  bot – where every message leaves them wanting more!
                 </p>
                 <p>
                   {`We've developed over 90 tools, ranging from Chrome extensions to chatbots and automation scripts, many of which are confidential. As such, I'm sharing only snapshots of 2-3 tools that have been published and are currently in internal use.`}
@@ -58,7 +60,6 @@ const DetailsPopup = ({ open, close }) => {
                   <div className="list_inner">
                     <div className="my_image">
                       <img src="img/thumbs/4-2.jpg" alt="image" />
-                    
                       <div
                         className="main"
                         data-img-url="img/portfolio/linkdln.png"
@@ -99,10 +100,19 @@ const DetailsPopup = ({ open, close }) => {
                 </li>
               </ul>
             </div>
+
+            {/* Updated Visit Button Section */}
+            <div className="dizme_tm_button">
+                  <a className="anchor" href="#about">
+                    <span>About Me</span>
+                  </a>
+                </div>
+
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default DetailsPopup;

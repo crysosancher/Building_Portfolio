@@ -47,7 +47,7 @@ const Portfolio = () => {
 
   return (
     <div className="dizme_tm_section" id="portfolio">
-      <DetailsPopup open={popup} close={() => setPopup(false)} />
+      <DetailsPopup open={popup} close={() => setPopup(false)} dataText={`"Name":"Vibhu Pandey"`} />
       <div className="dizme_tm_portfolio">
         <div className="container">
           <div className="dizme_tm_main_title" data-align="center">
@@ -347,7 +347,29 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li> */}
-
+                         {/* Lonar AI Project */}
+              <li className="detail grid-item" onClick={() => setPopup(true)}>
+                <div className="inner">
+                  <div
+                    className="entry dizme_tm_portfolio_animation_wrap"
+                    data-title="Tool Summary"
+                    data-category="Detail"
+                  >
+                    <a className="portfolio_popup" href="#">
+                      <img src="img/thumbs/42-34.jpg" alt="image" />
+                      <div
+                        className="main"
+                        data-img-url="img/portfolio/lonar.png"
+                      />
+                    </a>
+                  </div>
+                  <div className="mobile_title">
+                    <h3>Tool Summary</h3>
+                    <span>Backend</span>
+                  </div>
+                </div>
+              </li>
+                                       {/* Best Fit */}
               <li className="detail grid-item" onClick={() => setPopup(true)}>
                 <div className="inner">
                   <div
