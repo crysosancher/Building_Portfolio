@@ -1,0 +1,12 @@
+{
+	"hero1":"images/hero1.png",
+	"heading":"Josei",
+	"subHeading":"Josei is a collection of 1000 unique, hand-drawn NFTs that celebrate the beauty and diversity",
+	"p1":"Josei has been created by a team of talented artists who are passionate about showcasing the elegance and strength",
+	"p2":"Each NFT in the Josei collection is a one-of-a-kind piece of art, meticulously crafted to capture the essence of femininity and empowerment.",
+	"techStack":"Node.js, React, Next.js, Tailwind CSS, MongoDB",
+	"category":"NFT Collection",
+	"date":"2023",
+	"projectLink":"https://josei-nft.com"
+
+}

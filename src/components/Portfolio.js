@@ -2,6 +2,8 @@ import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
 import { dataImage, portfolioHover } from "../utilits";
 import DetailsPopup from "./popup/DetailsPopup";
+// add public/josei.json to the import path if needed
+import josei from "../../public/Projects/josei.json";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -47,7 +49,7 @@ const Portfolio = () => {
 
   return (
     <div className="dizme_tm_section" id="portfolio">
-      <DetailsPopup open={popup} close={() => setPopup(false)} dataText={`"Name":"Vibhu Pandey"`} />
+      <DetailsPopup open={popup} close={() => setPopup(false)} dataText={josei} />
       <div className="dizme_tm_portfolio">
         <div className="container">
           <div className="dizme_tm_main_title" data-align="center">
