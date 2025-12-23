@@ -7,14 +7,17 @@ function MyApp({ Component, pageProps }) {
     <Fragment>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicons/favicon-32x32.png"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-          rel="stylesheet"/>
-           <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicons/favicon-16x16.png"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -24,10 +27,7 @@ function MyApp({ Component, pageProps }) {
           name="keywords"
           content="vibhu Pandey,vibhu,pandey,vibhu portfolio, vibhu cryso,cryso, cryso portfolio, cryso portfolio website, cryso website, cryso portfolio website, cryso portfolio, cryso media, cryso media website, cryso media portfolio, cryso media portfolio website, cryso media website, cryso media portfolio website, cryso media portfolio, cryso media, cryso media website, cryso media portfolio, cryso media portfolio website, cryso media website, cryso media portfolio website, cryso media portfolio, cryso media, cryso media website"
         />
-        <meta
-          property="og:image"
-          content="Vibhu Pandey"
-        />
+        <meta property="og:image" content="Vibhu Pandey" />
         <meta property="og:title" content="Vibhu Pandey" />
         <meta
           property="og:description"
@@ -40,7 +40,6 @@ function MyApp({ Component, pageProps }) {
         <meta
           name="google-site-verification"
           content="google3a41203cd6529ae4"
-        
         />
       </Head>
       <Component {...pageProps} />

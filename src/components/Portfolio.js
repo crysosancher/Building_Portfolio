@@ -2,6 +2,7 @@ import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
 import { dataImage, portfolioHover } from "../utilits";
 import DetailsPopup from "./popup/DetailsPopup";
+import { portfolioItems } from "../data/portfolioData";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -10,11 +11,13 @@ const Portfolio = () => {
   }, []);
 
   // Isotope
-  const isotope = useRef();
+  const isotope = useRef(null);
   const [filterKey, setFilterKey] = useState("*");
   useEffect(() => {
-    setTimeout(() => {
-      isotope.current = new Isotope(".gallery_zoom", {
+    const timeoutId = setTimeout(() => {
+      const container = document.querySelector(".gallery_zoom");
+      if (!container) return;
+      isotope.current = new Isotope(container, {
         itemSelector: ".grid-item",
         //    layoutMode: "fitRows",
         percentPosition: true,
@@ -28,7 +31,13 @@ const Portfolio = () => {
         },
       });
     }, 500);
-    return () => isotope.current.destroy();
+    return () => {
+      clearTimeout(timeoutId);
+      if (isotope.current && typeof isotope.current.destroy === "function") {
+        isotope.current.destroy();
+        isotope.current = null;
+      }
+    };
   }, []);
   useEffect(() => {
     if (isotope.current) {
@@ -44,10 +53,18 @@ const Portfolio = () => {
 
   // Popup
   const [popup, setPopup] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  // Portfolio items from imported module
+  const items = portfolioItems;
 
   return (
     <div className="dizme_tm_section" id="portfolio">
-      <DetailsPopup open={popup} close={() => setPopup(false)} />
+      <DetailsPopup
+        open={popup}
+        close={() => setPopup(false)}
+        item={selectedItem}
+      />
       <div className="dizme_tm_portfolio">
         <div className="container">
           <div className="dizme_tm_main_title" data-align="center">
@@ -142,233 +159,34 @@ const Portfolio = () => {
                 </div>
               </li> */}
 
-              {/* ClickUp */}
-              <li className="youtube grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Clickup"
-                    data-category="Frontend"
-                  >
-                    <a
-                      // className="popup-youtube"
-                      href="https://prompt-mu.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
+              {/* Data-driven items */}
+              {items.map((it) => (
+                <li
+                  key={it.id}
+                  className={`${it.filterClass} grid-item`}
+                  onClick={() => {
+                    setSelectedItem(it);
+                    setPopup(true);
+                  }}
+                >
+                  <div className="inner">
+                    <div
+                      className="entry dizme_tm_portfolio_animation_wrap"
+                      data-title={it.title}
+                      data-category={it.categoryLabel}
                     >
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/clickup.png"
-                      />
-                    </a>
+                      <a className="portfolio_popup" href="#">
+                        <img src={it.thumb} alt="image" />
+                        <div className="main" data-img-url={it.cover} />
+                      </a>
+                    </div>
+                    <div className="mobile_title">
+                      <h3>{it.title}</h3>
+                      <span>{it.categoryLabel}</span>
+                    </div>
                   </div>
-                  <div className="mobile_title">
-                    <h3>Clickup</h3>
-                    <span>Frontend</span>
-                  </div>
-                </div>
-              </li>
-
-              {/* Shiva Cruz */}
-              <li className="youtube grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Community Page"
-                    data-category="Frontend"
-                  >
-                    <a
-                      // className="popup-youtube"
-                      href="https://shivacruz.netlify.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/community.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Community Website</h3>
-                    <span>Frontend</span>
-                  </div>
-                </div>
-              </li>
-              {/*  */}
-              {/* <li className="vimeo grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Comfortjouney"
-                    data-category="Vimeo"
-                  >
-                    <a
-                      className="popup-vimeo"
-                      href="https://player.vimeo.com/video/337293658?autoplay=1"
-                    >
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/2.jpg"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Ave Bottle</h3>
-                    <span>Vimeo</span>
-                  </div>
-                </div>
-              </li> */}
-              {/* Elitmus */}
-              <li className="soundcloud grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Online Gaming"
-                    data-category="Full Stack"
-                  >
-                    <a
-                      className="soundcloude_link mfp-iframe audio"
-                      href="https://elitmus1.onrender.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/elitmus.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Online Gaming</h3>
-                    <span>Full Stack</span>
-                  </div>
-                </div>
-              </li>
-
-              {/* Firebond */}
-              <li className="youtube grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Firebond"
-                    data-category="Frontend "
-                  >
-                    <a
-                      // className="popup-youtube"
-                      href="https://www.firebond.xyz/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="/img/thumbs/42-34 copy.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/firebond.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Firebond</h3>
-                    <span>Frontend</span>
-                  </div>
-                </div>
-              </li>
-              {/* comfortJourney */}
-              <li className="soundcloud grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Comfortjourney"
-                    data-category="Full Stack"
-                  >
-                    <a
-                      className="soundcloude_link mfp-iframe audio"
-                      href="https://www.comfortjourney.in/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="img/thumbs/42-56.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/comfort.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>ComfortJourney</h3>
-                    <span>Full Stack</span>
-                  </div>
-                </div>
-              </li>
-
-              {/* <li className="popup grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Scott Felix"
-                    data-category="Popup"
-                  >
-                    <a className="zoom" href="img/portfolio/5.jpg">
-                      <img src="img/thumbs/42-56.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/5.jpg"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Blue Lemon</h3>
-                    <span>Popup</span>
-                  </div>
-                </div>
-              </li> */}
-              {/* <li className="popup grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Art Stone"
-                    data-category="Popup"
-                  >
-                    <a className="zoom" href="img/portfolio/4.jpg">
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/4.jpg"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Art Stone</h3>
-                    <span>Popup</span>
-                  </div>
-                </div>
-              </li> */}
-
-              <li className="detail grid-item" onClick={() => setPopup(true)}>
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Tool Summary"
-                    data-category="Detail"
-                  >
-                    <a className="portfolio_popup" href="#">
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/lonar.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Tool Summary</h3>
-                    <span>Backend</span>
-                  </div>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
