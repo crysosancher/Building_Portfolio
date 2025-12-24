@@ -8,16 +8,21 @@ export const portfolioItems = [
     thumb: "img/portfolio/luas/luas_login.png",
     cover: "img/portfolio/luas/luas_login.png",
     description:
-      "AI-powered SaaS platform for automating workflows using LLMs, APIs, and backend services.",
-    techStack: "Node.js, Python, LLMs, PostgreSQL, AWS",
+      `Luas.ai is an AI-driven workflow automation platform designed to reduce manual effort in operational and sales processes. The platform enables teams to centralize data, automate repetitive tasks, and generate actionable insights using AI, without changing their existing tools.
+
+From opportunity tracking and reporting to user management and analytics, Luas.ai acts as an intelligence layer on top of business operations. It helps decision-makers move faster by converting raw data into structured insights, automated reports, and AI-assisted actions.
+
+Built with scalability and reliability in mind, Luas.ai is designed for growing teams that need automation, visibility, and control,  without adding operational complexity.`,
+    techStack: "Node.js, Python, LLMs, PostgreSQL, AWS, Next.js, Salesforce, SOOQL",
     date: "2025",
     gallery: [
       // "img/portfolio/luas/luas_login.png",
       "img/portfolio/luas/Luas_opp.png",
       "img/portfolio/luas/luas_reports.png",
+      "img/portfolio/luas/luas_users.png",
     ],
     ctaText: "Visit Platform",
-    ctaLink: "https://luas.ai",
+    ctaLink: "https://uat.luas.ai/",
   },
   {
     id: "rag-chatbot",
