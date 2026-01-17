@@ -48,8 +48,12 @@ const DetailsPopup = ({ open, close, item }) => {
             </div>
             <div className="main_details">
               <div className="textbox">
-                {i.description && <p>{i.description}</p>}
-                {i.description2 && <p>{i.description2}</p>}
+                {i.description && (
+                  <p dangerouslySetInnerHTML={{ __html: i.description }} />
+                )}
+                {i.description2 && (
+                  <p dangerouslySetInnerHTML={{ __html: i.description2 }} />
+                )}
               </div>
               <div className="detailbox">
                 <ul>
