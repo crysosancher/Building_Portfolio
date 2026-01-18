@@ -30,11 +30,25 @@ const Header = ({ logo }) => {
               <li>
                 <a href="#contact">Contact</a>
               </li>
+              {/*
                <li className="download_cv">
                 <a href="img/cv/Vibhu_pandey_GENAI.pdf" download="vibhu_pandey_genAI.pdf">
                   <span>Download CV</span>
                 </a>
-              </li> 
+              </li>
+              */}
+              <li className="download_cv">
+                <a
+                  href="https://www.linkedin.com/in/crysosancher"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    <i className="icon-linkedin" style={{ marginRight: 8 }} />
+                    Connect with me
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

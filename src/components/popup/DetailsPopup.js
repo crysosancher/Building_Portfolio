@@ -100,7 +100,7 @@ const DetailsPopup = ({ open, close, item }) => {
                 </ul>
               </div>
             )}
-            {i.ctaLink && (
+            {(i.ctaLink || i.ctaText) && (
               <div
                 className="portfolio_popup_footer"
                 style={{
@@ -117,9 +117,25 @@ const DetailsPopup = ({ open, close, item }) => {
                 }}
               >
                 <div className="dizme_tm_button">
-                  <a href={i.ctaLink} target="_blank" rel="noopener noreferrer">
-                    <span>{i.ctaText || "View Project"}</span>
-                  </a>
+                  {i.ctaLink && i.ctaLink !== "#" ? (
+                    <a
+                      href={i.ctaLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>{i.ctaText || "View Project"}</span>
+                    </a>
+                  ) : (
+                    <a
+                      style={{
+                        opacity: 0.5,
+                        cursor: "not-allowed",
+                        pointerEvents: "none",
+                      }}
+                    >
+                      <span>{i.ctaText || "View Project"}</span>
+                    </a>
+                  )}
                 </div>
               </div>
             )}

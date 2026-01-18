@@ -62,6 +62,19 @@ const MobileMenu = ({ logo }) => {
                 <span>Download CV</span>
               </a>
             </li> */}
+            <li className="download_cv">
+              <a
+                onClick={() => setToggle(false)}
+                href="https://www.linkedin.com/in/crysosancher"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>
+                  <i className="icon-linkedin" style={{ marginRight: 8 }} />
+                  Connect with me
+                </span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
